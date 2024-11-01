@@ -122,7 +122,7 @@ impl Default for Preference {
 #[serde(rename_all = "camelCase")]
 struct CommonJobParams {
     quality: FastStr,
-    regional_variant: FastStr,
+    // regional_variant: FastStr,
     mode: FastStr,
     browser_type: i32,
     text_type: FastStr,
@@ -133,7 +133,7 @@ impl Default for CommonJobParams {
     fn default() -> Self {
         Self {
             quality: "normal".into(),
-            regional_variant: "zh-Hans".into(),
+            // regional_variant: "zh-Hans".into(),
             mode: "translate".into(),
             browser_type: 1,
             text_type: "richtext".into(),
