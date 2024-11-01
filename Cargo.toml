@@ -1,0 +1,19 @@
+[package]
+name = "deeplx-rs"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.91"
+chrono = "0.4.38"
+faststr = "0.2.23"
+rand = "0.8.5"
+reqwest = { version = "0.12.9", features = ["rustls-tls"], default-features = false }
+serde = "1.0.214"
+sonic-rs = "0.3.14"
+tokio = "1.41.0"
+tracing = "0.1.40"
+tracing-subscriber = "0.3.18"
+volo = "0.10.1"
+volo-http = { version = "0.2.13", features = ["server", "query", "json"] }
+
