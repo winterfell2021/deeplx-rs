@@ -345,7 +345,11 @@ async fn translate_text(req: &TranslateRequest) -> anyhow::Result<TranslateRespo
         };
     }
     if let Some(lang) = &req.target_lang {
-        translate_req.params.lang.target_lang = lang.clone();
+        if lang.as_str() == "ZH-HANS" {
+            translate_req.params.lang.target_lang = "ZH".into();
+        } else {
+            translate_req.params.lang.target_lang = lang.clone();
+        }
     }
     translate_req.params.common_job_params.advanced_mode = true;
     translate_req.params.common_job_params.text_type = if is_rich_text(&req.text) {
